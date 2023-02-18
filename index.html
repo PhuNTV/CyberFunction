@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="container py-5">
+        <h1>Bài tập DOM JS</h1>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-bt1-tab" data-toggle="pill" data-target="#v-pills-bt1" type="button" role="tab" aria-controls="v-pills-bt1" aria-selected="true">Bài tập 1</button>
+                    <button class="nav-link" id="v-pills-bt2-tab" data-toggle="pill" data-target="#v-pills-bt2" type="button" role="tab" aria-controls="v-pills-bt2" aria-selected="false">Bài tập 2</button>
+                    <button class="nav-link" id="v-pills-bt3-tab" data-toggle="pill" data-target="#v-pills-bt3" type="button" role="tab" aria-controls="v-pills-bt3" aria-selected="false">Bài tập 3</button>
+                    <button class="nav-link" id="v-pills-bt4-tab" data-toggle="pill" data-target="#v-pills-bt4" type="button" role="tab" aria-controls="v-pills-bt4" aria-selected="false">Bài tập 4</button>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-8">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-bt1" role="tabpanel" aria-labelledby="v-pills-bt1-tab">
+                        <h2>Quản lý tuyển sinh</h2>
+                        <form class="mt-4">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="diemChuan" placeholder="Điểm chuẩn">
+                                </div>
+                                <div class="form-group col-4">
+                                    <select aria-label="State" class="form-control">
+                                        <option>Chọn khu vực</option>
+                                        <option id="khuVucA">A</option>
+                                        <option id="khuVucB">B</option>
+                                        <option id="khuVucC">C</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <select aria-label="State" class="form-control">
+                                        <option>Chọn đối tượng</option>
+                                        <option id="doiTuong1">1</option>
+                                        <option id="doiTuong2">2</option>
+                                        <option id="doiTuong3">3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="diemMon1" placeholder="Điểm môn thứ 1">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="diemMon2" placeholder="Điểm môn thứ 2">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="diemMon3" placeholder="Điểm môn thứ 3">
+                                </div>
+                            </div>
+                            <button id="btnTinhDiem" type="button" class="btn btn-primary my-3">Kết quả</button>
+                            <p id="txtTinhDiem" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt2" role="tabpanel" aria-labelledby="v-pills-bt2-tab">
+                        <h2>Tính tiền điện</h2>
+                        <form class="mt-4">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <input class="form-control" type="text" id="chuNha" placeholder="Nhập họ tên">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input class="form-control" type="number" id="soKw" placeholder="Nhập số kw">
+                                </div>
+                            </div>
+                            <button id="btnTienDien" type="button" class="btn btn-primary my-3">Tính tiền điện</button>
+                            <p id="txtTienDien" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt3" role="tabpanel" aria-labelledby="v-pills-bt3-tab">
+                        <h2>Tính thuế thu nhập cá nhân</h2>
+                        <form class="mt-4">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <input class="form-control" type="text" id="hoTen" placeholder="Nhập họ tên">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input class="form-control" type="number" id="thuNhapNam" placeholder="Tổng thu nhập năm">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input class="form-control" type="number" id="phuThuoc" placeholder="Số người phụ thuộc">
+                                </div>
+                            </div>
+                            <button id="btnThue" type="button" class="btn btn-primary my-3">Tính thuế</button>
+                            <p id="txtThue" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt4" role="tabpanel" aria-labelledby="v-pills-bt4-tab">
+                        <h2>Tính tiền cáp</h2>
+                        <form class="mt-4">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <select aria-label="State" id="myDropdown" class="form-control" onchange="toggleKetNoi()">
+                                        <option>Chọn loại khách hàng</option>
+                                        <option id="nhaDan">Nhà dân</option>
+                                        <option id="doanhNghiep">Doanh nghiệp</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="text" class="form-control" id="maKhachHang" placeholder="Nhập mã khách hàng">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="kenh" placeholder="Số kênh cao cấp">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="ketNoi" placeholder="Số kết nối">
+                                </div>
+                            </div>
+                            <button id="btnTienCap" type="button" class="btn btn-primary my-3">Tính tiền cáp</button>
+                            <p id="txtTienCap" class="alert alert-success"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/tuyenSinh.js"></script>
+    <script src="./js/tienDien.js"></script>
+    <script src="./js/tinhThue.js"></script>
+    <script src="./js/tinhTienCap.js"></script>
+</body>
+
+</html>
