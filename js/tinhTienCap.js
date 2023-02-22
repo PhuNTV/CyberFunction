@@ -68,7 +68,6 @@ function tinhTienCap() {
             case "dNghiep":
                 tienCap = hoaDon_dNghiep + tinhTienDichVu_dNghiep(soKetNoi) + kenh_dNghiep * soKenh;
                 break;
-
             default:
                 break;
         }
